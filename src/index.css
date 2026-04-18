@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+
+  /* Design Tokens from User Specification */
+  --color-primary: #a8275a;
+  --color-primary-container: #ff709f;
+  --color-on-primary: #ffeff1;
+  
+  --color-secondary: #006384;
+  --color-secondary-container: #97daff;
+  --color-on-secondary-container: #004d68;
+
+  --color-tertiary: #825000;
+  --color-tertiary-container: #f7a01e;
+  --color-on-tertiary-container: #4a2c00;
+
+  --color-surface-bright: #f5f6f7;
+  --color-on-surface: #2c2f30;
+  --color-on-surface-variant: #595c5d;
+  --color-surface-container: #e6e8ea;
+  --color-surface-container-low: #eff1f2;
+  --color-surface-container-high: #e0e3e4;
+  --color-surface-container-highest: #dadddf;
+  --color-surface-container-lowest: #ffffff;
+
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply font-body text-on-surface bg-surface-bright;
+  }
+}
+
+.board-canvas {
+  background-image: radial-gradient(circle at 2px 2px, #dadddf 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.curved-path-step {
+  @apply transition-transform duration-300 hover:scale-110 active:scale-95 cursor-pointer;
+}
